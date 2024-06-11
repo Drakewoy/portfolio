@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: #fcd7b2;
+}
+
+.row{
+margin-top: 40px;
+
+}
+
+.col  img{
+    /* max-width: 350px; */
+    max-width: 314px;
+    background-color: red;
+    display: block;
+    margin: auto;
+}
+.container{
+   background-color: rgb(243, 247, 247);
+}
+
+ .hire{
+    position: absolute;
+    width: 70px;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 16px;
+    color:black;
+    right: 0;
+   
+}
+
+.navbar-nav{
+    /* background-color: aquamarine; */
+    margin-left: 5%;
+    /* width: 79.3vw; */
+}
+.navRelative{
+    position: relative;
+}
+
+.table {
+    margin-top: 30px;
+    background-color: red;
+   
+}
+
+/* The screen managements */
+@media (max-width: 991px){
+    .hire{
+        right:50%;
+        
+    }
+}
