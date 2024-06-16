@@ -56,3 +56,43 @@ margin-top: 40px;
         
     }
 }
+
+.round-button {
+    width: 110px;
+    height: 110px;
+    background-color: #FFDB5C;
+    color: white;
+    border: none;
+    box-shadow: 8px -1px 8px 1px #181713 ;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    line-height: 100px; /* Align text vertically */
+    cursor: pointer;
+    font-family: "roboto", "Helvetica Neue", Helvetica, Arial;
+    padding: 1px;
+    font-weight: 900;
+    margin-bottom: 20px;
+
+}
+
+th span {
+    color: #5C88C4;
+}
+
+.services{
+    border: 1px solid black;
+    display: relative;
+}
+
+.s-desc{
+    width: 45%;
+    display: inline-block;
+}
+
+table{
+    width: 45%;
+    float: right;
+}
