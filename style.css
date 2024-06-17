@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: #fcd7b2;
+    /* background-color: #fcd7b2; */
 }
 
 .row{
@@ -19,7 +19,7 @@ margin-top: 40px;
     margin: auto;
 }
 .container{
-   background-color: rgb(243, 247, 247);
+   /* background-color: rgb(243, 247, 247); */
 }
 
  .hire{
@@ -83,16 +83,25 @@ th span {
 }
 
 .services{
-    border: 1px solid black;
     display: relative;
+    width: 100%;
+    /* margin:auto */
 }
 
-.s-desc{
-    width: 45%;
-    display: inline-block;
-}
 
-table{
-    width: 45%;
-    float: right;
+.content .items{
+    background:  radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    border-right: 1px solid #ccc;
+    /* width: 300px; */
+    height: inherit;
+    margin: auto;
+}
+.content .items:nth-child(3n) {
+    border-right: none;
+}
+.content .items img{
+    width: 77px;
+    height: 80px;
+    margin: 10px 10px 0;
+    text-align: center;
 }
