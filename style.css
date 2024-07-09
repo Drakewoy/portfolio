@@ -1,15 +1,20 @@
 :root {
-    --backgroudHt: linear-gradient(90deg, #00c0ff 30%, #ff014f 60%)
+    --color-primary: #ff014f;
+    --color-secondary: #00c0ff;
+    --backgroudHt: linear-gradient(90deg, #00c0ff 30%, #ff014f 60%);
+    --bg-gradient: linear-gradient(45deg, var(--color-secondary) 0%, var(--color-primary) 70%);
 
 }
 
 * {
     margin: 0;
     padding: 0;
+   
 }
 
 body {
-    background:linear-gradient(45deg, #F9F0C9 30%, #E7F3F1 60%);
+
+ background-image: url(images/back.jpg);
 
 }
 
@@ -110,19 +115,21 @@ th span {
     min-width: 300px;
     height: inherit;
     margin: 0 auto 10px;
-
+    padding: 0 37px;
 }
 
 .content .items:nth-child(3n) {
     border-right: none;
+    margin: 0 
 }
 
 .content .items img {
     width: 77px;
     height: 80px;
-    margin: 10px 10px 0;
+    margin-bottom: 20px;
     text-align: center;
 }
+
 
 .title .exp {
     background: var(--backgroudHt) ;
@@ -148,4 +155,153 @@ th span {
     padding-top: 100px;
     margin-top: 20px;
     margin-bottom: 100px;
+}
+
+.myWork .items{
+    background-color: red;
+}
+
+.myWork .items img{
+    width: 314px;
+}
+
+/* la partie du cv */
+
+.cv {
+    position: relative;
+    margin: 5%;
+}
+.cvheader{
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 30%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+    padding: 10px;
+    position:relative;
+    margin: 0;
+    /* margin-bottom: 50px; */
+    z-index: 1;
+    top: 35px;
+}
+
+strong{
+    display: inline-block;
+    margin-left: 60px;
+    position: relative;
+    z-index: 1;
+    font-size: 25px;
+    font-weight: 900px;
+}
+strong::after{
+    left: -45px;
+    top: 50%;
+    content: "";
+    height: 3px;
+    width: 30px;
+    background-color:#000;
+    position: absolute;
+    z-index: -1;
+    transition: all 0.35s ease-in-out 0s;
+}
+
+
+.bar{
+    background-color: #fff;
+    width: 100px;
+    height: 2px;
+}
+.cvheader button{
+ border: none;
+ background-color: #fff;
+ padding-left:15px;
+ padding-right: 15px;
+ border-radius: 50px;
+ padding-top: 15px;
+ padding-bottom: 15px;
+ text-transform: uppercase;
+ color: #000;
+ /* width: 300px;  */
+ transition: all 0.35s ease-in-out 0s;
+
+
+
+
+ margin: 0;
+
+ font-size: 15px;
+ font-weight: 800;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.cvheader button:nth-child(2){
+  margin: 0 10px;
+}
+
+div.bio, div.skills, div.ed{
+    box-shadow:1px 5px 5px 5px #fff;
+}
+div.bio, div.skills, div.ed ::before{
+    background-color: rgb(255 255 255 / 30%);
+}
+ button:hover strong::after{
+    background-color: #fff;
+}
+button:hover{
+    color: #fff;
+    background-color: #5C88C4;
+}
+button.active{
+    color: #fff;
+    background-color: #5C88C4;
+}
+button.active strong::after{
+    background-color: #fff;
+}
+
+ul {
+    position: relative;
+}
+
+.bioTab li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.bioTab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 70px;
+    overflow: auto;
+    padding:0;
+    margin-bottom: 0;
+}
+
+div.bio li::after {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #cfd4d6;
+}
+
+
+.cvcontainer{
+    padding: 50px !important;
+    /* padding-right: 30px; */
+}
+
+.biowrapper{
+    margin-bottom: 100px;
+    margin-top: 50px;
 }

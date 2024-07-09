@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            border: 1px solid green;
+        }
+
+        .but strong {
+            display: inline-block;
+            margin-left: 60px;
+            position: relative;
+            z-index: 1;
+            font-size: 25px;
+            font-weight: 900px;
+        }
+
+        .but{
+            background-color: #040836;
+        }
+
+        .element::before {
+            content: open-quote;
+        }
+        .highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Adjust as needed */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Adjust height as needed */
+  background-color: yellow; /* Adjust color as needed */
+  z-index: -1; /* Place it behind the text */
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="can">
+            <button class="but bio">Biography - <strong>01</strong></button>
+            <button class="but skills">Skills - <strong>02</strong></button>
+            <button class="but ed">Education - <strong>03</strong></button>
+
+            <p>This is a <span class="highlight">strong</span> word.</p>
+
+        </div>
+        <div class="box" style="color: #fff;position:absolute; background-color: #040836; display: inline;">
+            <button>1</button>
+            <button>1</button>
+            <button>1</button>      
+        </div>
+    </div>
+    <p class="element"> yow</p>
+</body>
+
+</html>

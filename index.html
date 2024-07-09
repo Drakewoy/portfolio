@@ -12,6 +12,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -154,21 +157,149 @@
                 </div>
             </div>
         </div>
-        <div class="cv">
-            <h1> * cv * </h1>
-        </div>
-
-        <footer>
-            <div></div>
-            <div class="form">
-                <h4>Contact Me</h4>
-                <input type="text"><br>
-                <input type="text"><br>
-                <input type="text"><br>
+        <div class="myWork">
+            <div class="container">
+                <div class="row row-cols-3">
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                    <div class="items col-lg-4">
+                        <img src="Examples/6.png" alt="">
+                    </div>
+                </div>
             </div>
-        </footer>
-    </div>
-    <script src="bootstrap.js"></script>
+        </div>
+        <div class="container cv">
+
+
+            <div class="cvheader  text-center">
+                <button class="but bio active">Biography <strong>01</strong></button>
+                <button class="but skills">Skills <strong>02</strong></button>
+                <button class="but ed">Education <strong>03</strong></button>
+            </div>
+
+            <div class="biowrapper">
+                <div class="bio row">
+                    <div class="cvcontainer">
+                        <div class="col-lg-12">
+                            <ul class="bioTab">
+                                <li>
+                                    <h5>
+                                        Name
+                                    </h5>
+                                    <p>
+                                        Dieunine Laine
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Age
+                                    </h5>
+                                    <p>
+                                        25
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Email
+                                    </h5>
+                                    <p>
+                                        dlaine1998@gmail.com
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Skype
+                                    </h5>
+                                    <p>
+                                        Lainedieunineken
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Birthday
+                                    </h5>
+                                    <p>
+                                        19 August 1998
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Adaress
+                                    </h5>
+                                    <p>
+                                        Delmas 33, rue st gor , Haiti
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Phone
+                                    </h5>
+                                    <p>
+                                        +(509) 33408264 / 47 611927
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Freelance
+                                    </h5>
+                                    <p>
+                                        Available
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="skills"></div>
+            <div class="ed"></div> -->
+                </div>
+            </div>
+
+            <footer>
+                <div></div>
+                <div class="form">
+                    <h4>Contact Me</h4>
+                    <input type="text"><br>
+                    <input type="text"><br>
+                    <input type="text"><br>
+                </div>
+            </footer>
+        </div>
+        <script>
+            const buttons = document.querySelectorAll('.but');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to the clicked button
+                    button.classList.add('active');
+                });
+            });
+        </script>
+        <script src="bootstrap.js"></script>
 </body>
 
 </html>
