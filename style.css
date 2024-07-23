@@ -9,12 +9,14 @@
 * {
     margin: 0;
     padding: 0;
-   
+
 }
 
 body {
 
- background-image: url(images/back.jpg);
+    background-image: url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -98,13 +100,24 @@ th span {
 }
 
 .services {
-    display: relative;
-    width: 100%;
-    /* margin:auto */
-    /* background-color: #fff; */
-    /* opacity: 0.5; */
-    background-color: rgba(252, 250, 250, 0.4);
+    background-color: rgba(252 250 250 / 40%);
+}
 
+div.sep {
+    background-color: #ff014f;
+    height: 5px;
+    width: 20px;
+    margin: auto;
+}
+
+div.sep::after {
+    content: " ";
+    background-color: #ff014f;
+    height: 5px;
+    width: 10px;
+    left: 650px;
+    position: absolute;
+    z-index: 10;
 }
 
 
@@ -120,7 +133,7 @@ th span {
 
 .content .items:nth-child(3n) {
     border-right: none;
-    margin: 0 
+    margin: 0
 }
 
 .content .items img {
@@ -132,7 +145,7 @@ th span {
 
 
 .title .exp {
-    background: var(--backgroudHt) ;
+    background: var(--backgroudHt);
     text-align: center;
     background-size: cover;
     -webkit-background-clip: text;
@@ -146,22 +159,22 @@ th span {
     text-transform: uppercase;
 }
 
-.title h4{
+.title h4 {
     font-size: 34px;
     text-align: center;
 }
 
-.title{
+.title {
     padding-top: 100px;
     margin-top: 20px;
     margin-bottom: 100px;
 }
 
-.myWork .items{
+.myWork .items {
     background-color: red;
 }
 
-.myWork .items img{
+.myWork .items img {
     width: 314px;
 }
 
@@ -171,7 +184,8 @@ th span {
     position: relative;
     margin: 5%;
 }
-.cvheader{
+
+.cvheader {
     background-color: #fff;
     border: none;
     border-radius: 50px;
@@ -179,15 +193,14 @@ th span {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 15px;
-    padding: 10px;
-    position:relative;
+    padding: 8px;
+    position: relative;
     margin: 0;
-    /* margin-bottom: 50px; */
     z-index: 1;
-    top: 35px;
+    top: 78px;
 }
 
-strong{
+strong {
     display: inline-block;
     margin-left: 60px;
     position: relative;
@@ -195,71 +208,86 @@ strong{
     font-size: 25px;
     font-weight: 900px;
 }
-strong::after{
+
+strong::after {
     left: -45px;
     top: 50%;
     content: "";
-    height: 3px;
+    height: 1.5px;
     width: 30px;
-    background-color:#000;
+    background-color: #000;
     position: absolute;
     z-index: -1;
     transition: all 0.35s ease-in-out 0s;
 }
 
 
-.bar{
+.bar {
     background-color: #fff;
     width: 100px;
     height: 2px;
 }
-.cvheader button{
- border: none;
- background-color: #fff;
- padding-left:15px;
- padding-right: 15px;
- border-radius: 50px;
- padding-top: 15px;
- padding-bottom: 15px;
- text-transform: uppercase;
- color: #000;
- /* width: 300px;  */
- transition: all 0.35s ease-in-out 0s;
+
+.cvheader button {
+    border: none;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #000;
+    /* width: 300px;  */
+    transition: all 0.35s ease-in-out 0s;
 
 
 
 
- margin: 0;
+    margin: 0;
 
- font-size: 15px;
- font-weight: 800;
- display: flex;
- align-items: center;
- justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cvheader button:nth-child(2){
-  margin: 0 10px;
+.cvheader button:nth-child(2) {
+    margin: 0 10px;
 }
 
-div.bio, div.skills, div.ed{
-    box-shadow:1px 5px 5px 5px #fff;
+.edSubWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: auto;
+
 }
-div.bio, div.skills, div.ed ::before{
+
+div.ed,
+div.skills,
+div.bio {
     background-color: rgb(255 255 255 / 30%);
+    box-shadow: 0px 0px 3px 2px #fff;
+    display: none;
 }
- button:hover strong::after{
+
+button:hover strong::after {
     background-color: #fff;
 }
-button:hover{
+
+button:hover {
     color: #fff;
     background-color: #5C88C4;
 }
-button.active{
+
+button.active {
     color: #fff;
     background-color: #5C88C4;
 }
-button.active strong::after{
+
+button.active strong::after {
     background-color: #fff;
 }
 
@@ -281,7 +309,7 @@ ul {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 70px;
     overflow: auto;
-    padding:0;
+    padding: 0;
     margin-bottom: 0;
 }
 
@@ -296,12 +324,35 @@ div.bio li::after {
 }
 
 
-.cvcontainer{
+.cvcontainer {
     padding: 50px !important;
     /* padding-right: 30px; */
 }
 
-.biowrapper{
+.biowrapper {
     margin-bottom: 100px;
     margin-top: 50px;
+}
+
+
+.visible {
+    display: block !important;
+    /* Show the visible section */
+}
+
+/* la partie du skills */
+
+ul li {
+    list-style: none;
+
+}
+.skills span.bar {
+    /* background: #353b48; */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: block;
+    height: 20px;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }

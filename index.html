@@ -13,7 +13,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
+        .skills,
+        .ed {
+            padding-top: 30px;
 
+        }
+
+        .rndP {
+            background-color: rgb(238, 36, 70);
+            width: 20px;
+            height: 20px;
+            position: relative;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ed {
+            position: relative;
+        }
+
+        .rndP::after {
+            content: " ";
+            background-color: rgb(238, 36, 70);
+            width: 1px;
+            height: 200px;
+            position: absolute;
+            /* margin-bottom: 100px;     */
+            top: 0;
+            z-index: -2;
+        }
+
+        .rndCh {
+            background-color: rgb(240, 240, 240);
+            width: 10px;
+            height: 10px;
+            position: relative;
+            border-radius: 50px;
+
+        }
+
+        .af {
+            margin-top: 30px;
+            padding-bottom: 10px;
+            margin-left: 30px;
+        }
+
+        .af h1.edTitle {
+            font-size: 22px;
+            position: relative;
+            top: -20px;
+            left: 40px;
+        }
+
+        .af h4 {
+            position: relative;
+            left: 40px;
+            top: -20px;
+            font-size: 16px;
+        }
+
+        .af .year {
+            background-color: rgb(238, 36, 70);
+            display: inline-block;
+            font-size: 20px;
+            color: #fff;
+            padding: 5px;
+            position: relative;
+            left: 40px;
+            top: -8px;
+        }
+
+        .af .desc {
+            position: relative;
+            left: 40px;
+            width: 314px;
+            padding-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -194,13 +271,13 @@
 
 
             <div class="cvheader  text-center">
-                <button class="but bio active">Biography <strong>01</strong></button>
-                <button class="but skills">Skills <strong>02</strong></button>
-                <button class="but ed">Education <strong>03</strong></button>
+                <button class="but  active" id="bioBtn">Biography <strong>01</strong></button>
+                <button class="but " id="skillsBtn">Skills <strong>02</strong></button>
+                <button class="but" id="edBtn">Education <strong>03</strong></button>
             </div>
 
             <div class="biowrapper">
-                <div class="bio row">
+                <div class="bio visible row">
                     <div class="cvcontainer">
                         <div class="col-lg-12">
                             <ul class="bioTab">
@@ -271,9 +348,136 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="skills"></div>
-            <div class="ed"></div> -->
                 </div>
+                <div class="skills">
+                    <ul>
+                        <li>
+                            <h3>HTML</h3>
+                            <span class="bar">
+                                <span class="html"></span>
+                            </span>
+
+                        </li>
+                        <li>
+                            <h3>CSS</h3>
+                            <span class="bar">
+                                <span class="css"></span>
+                            </span>
+                        </li>
+
+
+                        <li>
+                            <h3>JAVASCRIPT</h3>
+                            <span class="bar">
+                                <span class="javascript"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <h3>JAVA</h3>
+                            <span class="bar">
+                                <span class="java"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <h3>PYTHON</h3>
+                            <span class="bar">
+                                <span class="python"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <h3>PHP</h3>
+                            <span class="bar">
+                                <span class="php"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <h3>NODE.JS</h3>
+                            <span class="bar">
+                                <span class="nodejs"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <h3>GIT</h3>
+                            <span class="bar">
+                                <span class="git"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <h3>NETWORKING</h3>
+                            <span class="bar">
+                                <span class="network"></span>
+                            </span>
+
+                        </li>
+                        <li>
+                            <h3>SQL</h3>
+                            <span class="bar">
+                                <span class="sql"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <h3>ORACLE</h3>
+                            <span class="bar">
+                                <span  class="oracle"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <h3>MONGODB</h3>
+                            <span class="bar">
+                                <span class="mangodb"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ed">
+
+                    <div class="edSubWrap">
+                        <div class="af">
+                            <div class="rndP">
+                                <div class="rndCh"></div>
+                            </div>
+                            <h1 class="edTitle">AS - Science & information</h1>
+                            <h4>Superking college</h4>
+                            <h1 class="year">2021 - 2025</h1>
+                            <p class="desc">The training provided by universities in order to prepare people to work
+                                various sector of the economi or areas of cultures</p>
+                        </div>
+
+                        <div class="af">
+                            <div class="rndP">
+                                <div class="rndCh"></div>
+                            </div>
+                            <h1 class="edTitle">AS - Science & information</h1>
+                            <h4>Superking college</h4>
+                            <h1 class="year">2021 - 2025</h1>
+                            <p class="desc">The training provided by universities in order to prepare people to work
+                                various sector of the economi or areas of cultures</p>
+                        </div>
+
+                        <div class="af">
+                            <div class="rndP">
+                                <div class="rndCh"></div>
+                            </div>
+                            <h1 class="edTitle">AS - Science & information</h1>
+                            <h4>Superking college</h4>
+                            <h1 class="year">2021 - 2025</h1>
+                            <p class="desc">The training provided by universities in order to prepare people to work
+                                various sector of the economi or areas of cultures</p>
+                        </div>
+
+                        <div class="af">
+                            <div class="rndP">
+                                <div class="rndCh"></div>
+                            </div>
+                            <h1 class="edTitle">AS - Science & information</h1>
+                            <h4>Superking college</h4>
+                            <h1 class="year">2021 - 2025</h1>
+                            <p class="desc">The training provided by universities in order to prepare people to work
+                                various sector of the economi or areas of cultures</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <footer>
@@ -286,19 +490,8 @@
                 </div>
             </footer>
         </div>
-        <script>
-            const buttons = document.querySelectorAll('.but');
 
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    buttons.forEach(btn => btn.classList.remove('active'));
-
-                    // Add active class to the clicked button
-                    button.classList.add('active');
-                });
-            });
-        </script>
+        <script src="index.js"></script>
         <script src="bootstrap.js"></script>
 </body>
 
