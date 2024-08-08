@@ -14,10 +14,9 @@
 
 body {
 
-    background-image: url(images/back.jpg);
+    background-image: url(../images/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .row {
@@ -222,11 +221,7 @@ strong::after {
 }
 
 
-.bar {
-    background-color: #fff;
-    width: 100px;
-    height: 2px;
-}
+
 
 .cvheader button {
     border: none;
@@ -346,13 +341,203 @@ ul li {
     list-style: none;
 
 }
-.skills span.bar {
-    /* background: #353b48; */
+
+.skills {
+    position: relative;
+}
+
+.bar {
+    background-color: #333;
+    width: 328px;
+    height: 8px;
+    margin-top: 16px;
+    margin-bottom: 50px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     display: block;
-    height: 20px;
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    float: left;
+}
+
+div.progressionCon {
+    /* background-color: red; */
+
+    /* float: right; */
+    padding-top: 25px;
+}
+
+div.progressionCon ul li {
+    display: flex;
+}
+
+
+.bar .front-end,
+.oriented,
+.back-end
+ {
+    display: block;
+    background-color: #ff014f;
+    height: 8px;
+}
+
+div .level {
+    position: relative;
+    margin-left: 100px;
+    margin-right: 1px;
+    width: 80px;
+}
+
+div .level h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    align: center;
+    float: left;
+}
+
+div .skills h3 {
+    /* background-color: #00c0ff; */
+    width: 30vw;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bar .front-end {
+    width: 90%;
+    animation: front-end 0.9s;
+}
+
+.bar .oriented {
+    width: 95%;
+    height: 8px;
+    animation: oriented 0.9s;
+}
+
+.bar .back-end {
+    width: 75%;
+    animation: back-end 0.9s;
+}
+
+div .icon i{
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    width: 65px;
+    height: 65px;
+    line-height: 67px;
+} 
+
+ div .icon  h4 i{
+    margin-right: 10px;
+    margin-top: -10px;
+}
+.additionalSkills{
+    padding-left: 32px;
+}
+.additionalSkills .database {
+  width: 48%;
+  float: left;
+  /* background-color: #5C88C4; */
+}
+
+.bar .database{
+    width: 90%;
+    animation: database 0.9s;
+    background-color: #ff014f;
+    height: 8px;
+}
+
+
+
+.additionalSkills .networking {
+    width: 48%;
+    float: left;
+    /* background-color: #ff014f; */
+}
+
+.bar .networking{
+    width: 80%;
+    animation: networking 0.9s;
+    background-color: #ff014f;
+    height: 8px;
+}
+
+
+@keyframes front-end {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+
+@keyframes oriented {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes back-end {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes database {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes networking {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+
+/* La partie footer */
+.persinfo,
+.form {
+    width: 39vw;
+    float: left;
+    background-color: #000;
+}
+
+.persinfo h3 {
+    font-size: 16px;
+}
+
+.form {
+    background-color: red;
+}
+
+.form input,
+textarea {
+    width: 80%;
+    border: none;
+    /* margin: 20px; */
+    display: block;
+    margin: 0 auto;
 }
