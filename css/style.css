@@ -85,13 +85,12 @@ body {
     display: inline-block;
     font-size: 19px;
     line-height: 100px;
-    /* Align text vertically */
     cursor: pointer;
     font-family: "roboto", "Helvetica Neue", Helvetica, Arial;
     padding: 1px;
     font-weight: 900;
-    margin-bottom: 20px;
-
+    /* margin-bottom: 20px; */
+    transition: border-color ease-in-out 3s;
 }
 
 th span {
@@ -527,9 +526,7 @@ footer {
 
 .persinfo,
 .form {
-    width: 39vw;
     float: left;
-
 }
 
 .persinfo h3 {
@@ -541,6 +538,7 @@ footer {
 }
 
 .form {
+    width:  50%;
     margin-top: 30px;
     height: 350px;
     border-radius: 50%;
@@ -551,23 +549,23 @@ footer {
 
 .form textarea,
 input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    background: none;
     width: 70%;
     /* border: 1px solid black; */
     margin: 0 auto !important;
     display: block;
     transform: translateY(70px);
-    padding-left: 5px;
+    padding: 0.5rem 0.7rem;
 
 }
 
 .form div.btnM {
-    /* position: absolute !important; */
-    /* display: block !important; */
-
     width: 100px !important;
     margin: 15px auto !important;
     transform: translateY(60px);
-
 }
 
 .form button {
@@ -586,7 +584,6 @@ input {
     padding-top: 20px;
     border-bottom: 1px solid grey !important;
     border-width: 30px;
-    /* color: #fff; */
     font-family: 'Courier New', Courier, monospace;
     font-weight: 800;
 }
