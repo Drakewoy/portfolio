@@ -90,8 +90,10 @@ body {
     padding: 1px;
     font-weight: 900;
     /* margin-bottom: 20px; */
-    transition: border-color ease-in-out 3s;
+   
 }
+
+
 
 th span {
     color: #5C88C4;
@@ -99,6 +101,7 @@ th span {
 
 .services {
     background-color: rgba(252 250 250 / 40%);
+    margin-bottom: 100px;
 }
 
 div.sep {
@@ -168,8 +171,17 @@ div.sep::after {
     margin-bottom: 100px;
 }
 
+.myWork{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 40px;
+    /* background-color: red; */
+}
+
 .myWork .items {
-    background-color: red;
+   
 }
 
 .myWork .items img {
@@ -220,7 +232,9 @@ strong::after {
 }
 
 
-
+.desc, .me{
+    padding-top: 20px;
+}
 
 .cvheader button {
     border: none;
@@ -547,8 +561,9 @@ footer {
     border: 2px dashed grey;
 }
 
+
 .form textarea,
-input {
+input{
     outline: none;
     border: none;
     border-bottom: 1px solid grey;
@@ -558,8 +573,18 @@ input {
     margin: 0 auto !important;
     display: block;
     transform: translateY(70px);
+    transition: border-color ease .5s;
     padding: 0.5rem 0.7rem;
 
+}
+
+
+.form  
+input:focus{
+    border-color: #00c0ff;
+}
+.form textarea:focus{
+        border-color: #00c0ff;
 }
 
 .form div.btnM {
