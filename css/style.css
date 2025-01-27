@@ -72,6 +72,7 @@ body {
     }
 }
 
+
 .round-button {
     width: 110px;
     height: 110px;
@@ -90,7 +91,7 @@ body {
     padding: 1px;
     font-weight: 900;
     /* margin-bottom: 20px; */
-   
+    
 }
 
 
@@ -124,7 +125,7 @@ div.sep::after {
 
 .content .items {
     /* background: radial-gradient(circle, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%); */
-
+    
     border-right: 1px solid #ccc;
     min-width: 300px;
     height: inherit;
@@ -171,22 +172,29 @@ div.sep::after {
     margin-bottom: 100px;
 }
 
-.myWork{
+.myWork {
+    /* overflow-x: auto; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    column-gap: 20px;
-    row-gap: 40px;
-    /* background-color: red; */
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-
 .myWork .items {
-   
+    /* margin-right: 30px;  */
+    background-color: red;
+    width: 100%; /* Makes the images fit the width of each column */
+    height: auto; 
+    display: block;
 }
 
 .myWork .items img {
-    width: 314px;
+    width: 100%; /* Image will fit the width of its parent .items */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensures no extra space around the image */
 }
+
 
 /* la partie du cv */
 
@@ -232,7 +240,8 @@ strong::after {
 }
 
 
-.desc, .me{
+.desc,
+.me {
     padding-top: 20px;
 }
 
@@ -248,12 +257,12 @@ strong::after {
     color: #000;
     /* width: 300px;  */
     transition: all 0.35s ease-in-out 0s;
-
-
-
-
+    
+    
+    
+    
     margin: 0;
-
+    
     font-size: 15px;
     font-weight: 800;
     display: flex;
@@ -270,7 +279,7 @@ strong::after {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     margin: auto;
-
+    
 }
 
 div.ed,
@@ -353,7 +362,7 @@ div.bio li::after {
 
 ul li {
     list-style: none;
-
+    
 }
 
 .skills {
@@ -377,7 +386,7 @@ ul li {
 
 div.progressionCon {
     /* background-color: red; */
-
+    
     /* float: right; */
     padding-top: 25px;
 }
@@ -495,7 +504,7 @@ div .icon h4 i {
     0% {
         width: 0%;
     }
-
+    
     100% {
         width: 95%;
     }
@@ -505,7 +514,7 @@ div .icon h4 i {
     0% {
         width: 0%;
     }
-
+    
     100% {
         width: 75%;
     }
@@ -515,7 +524,7 @@ div .icon h4 i {
     0% {
         width: 0%;
     }
-
+    
     100% {
         width: 90%;
     }
@@ -534,7 +543,7 @@ div .icon h4 i {
 
 /* La partie footer */
 footer {
-      background-color: rgb(255 255 255 / 30%);
+    background-color: rgb(255 255 255 / 30%);
     box-shadow: 0px 0px 3px 5px #fff;
 }
 
@@ -552,7 +561,7 @@ footer {
 }
 
 .form {
-    width:  50%;
+    width: 50%;
     margin-top: 30px;
     height: 350px;
     border-radius: 50%;
@@ -563,7 +572,7 @@ footer {
 
 
 .form textarea,
-input{
+input {
     outline: none;
     border: none;
     border-bottom: 1px solid grey;
@@ -575,16 +584,16 @@ input{
     transform: translateY(70px);
     transition: border-color ease .5s;
     padding: 0.5rem 0.7rem;
-
+    
 }
 
 
-.form  
-input:focus{
+.form input:focus {
     border-color: #00c0ff;
 }
-.form textarea:focus{
-        border-color: #00c0ff;
+
+.form textarea:focus {
+    border-color: #00c0ff;
 }
 
 .form div.btnM {
@@ -613,7 +622,7 @@ input:focus{
     font-weight: 800;
 }
 
-footer .mediaSocial{
+footer .mediaSocial {
     /* background-color: red; */
     position: relative;
     left: 40px;
@@ -621,23 +630,81 @@ footer .mediaSocial{
 }
 
 
-footer .mediaSocial i{
+footer .mediaSocial i {
     margin-right: 50px;
     font-size: 18px;
     background-color: rgb(248, 246, 246);
-    padding:17px;
+    padding: 17px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 1px dashed rgb(146, 142, 142);
 }
-footer .container .titleC{
+
+footer .container .titleC {
     color: rgb(157, 134, 201);
     font-size: 16px;
     padding-top: 5px;
 }
 
-footer h4{
+footer h4 {
     font-weight: bolder;
     letter-spacing: 5px;
 }
+
+
+/* ---------------------- The responsive part for phone ------------------------- */
+/* Styles for phones */
+@media only screen and (max-width: 600px) {
+    .myWork {
+        /* overflow-x: auto; */
+         display: grid;
+         grid-template-columns: 1fr ;}
+
+         div.sep::after {
+            left: 220px;
+           
+        }
+
+        .cvheader {
+            background-color: #e2dddd;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 0 1rem 0 rgb(0 0 0 / 30%);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 15px;
+            padding: 15px;
+            position: relative;
+            margin: 0;
+            z-index: 1;
+            top: 78px;
+        }
+        .cvheader button{
+            margin-bottom: 15px;
+        }
+
+        .cvheader button:nth-child(2) {
+            margin-bottom: 15px;
+        }
+
+        .cvheader button:nth-child(3) {
+            margin-bottom: 0px;
+        }
+}
+
+/* Styles for tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .myWork {
+        /* overflow-x: auto; */
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;}
+
+         div.sep::after {
+            left: 260px;
+           
+        }
+}
+
+/* Styles for laptops and desktops */
+@media only screen and (min-width: 1025px) {}
