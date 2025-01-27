@@ -698,11 +698,39 @@ footer h4 {
     .myWork {
         /* overflow-x: auto; */
          display: grid;
-         grid-template-columns: 1fr 1fr 1fr;}
+         grid-template-columns: 1fr 1fr 1fr;
+        background-color: yellow;
+        }
 
          div.sep::after {
             left: 260px;
            
+        }
+
+        .cvheader {
+            background-color: #e2dddd;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 0 1rem 0 rgb(0 0 0 / 30%);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 15px;
+            padding: 15px;
+            position: relative;
+            margin: 0;
+            z-index: 1;
+            top: 78px;
+        }
+        .cvheader button{
+            margin-bottom: 15px;
+        }
+
+        .cvheader button:nth-child(2) {
+            margin-bottom: 15px;
+        }
+
+        .cvheader button:nth-child(3) {
+            margin-bottom: 0px;
         }
 }
 
